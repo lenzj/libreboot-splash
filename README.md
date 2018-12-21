@@ -1,4 +1,4 @@
-#Purpose
+# Purpose
 
 This repository contains a makefile and instructions for adding custom
 bootsplash images such as the ones below to a libreboot rom.  The default
@@ -11,7 +11,7 @@ platform but other libreboot computers may be added in the future.
 
 For more info on what libreboot is see <https://libreboot.org>
 
-#Usage
+# Usage
 
 These are quick instructions to create a libreboot rom containing a custom
 splash image:
@@ -26,7 +26,7 @@ splash image:
 For instructions on how to flash a libreboot rom refer to the "install"
 instructions on the libreboot website at <https://libreboot.org>
 
-#Dependencies
+# Dependencies
 
 Ensure the following is installed in your particular linux system:
 
@@ -42,7 +42,7 @@ In addition the following will be needed but are likely already installed:
 - cat
 - grep
 
-#"config.mk" parameters
+# "config.mk" parameters
 
 The "config.mk" file is used to select various desired parameters and
 customizations.  Edit the parameters in the file carefully.  These are directly
@@ -64,7 +64,7 @@ typos and incorrect case will cause issues.
 - LBU_CPU: This is the architecture of the **host computer** running this
   makefile. ("x86_64", "i686", or "armv7l")
 
-#Creating Custom Splash Images
+# Creating Custom Splash Images
 
 The example splash images in this repository were created using the LibreOffice
 Draw application (files ending in ".odg").  Although there are many
@@ -117,16 +117,17 @@ libreboot.  At the time of this writing LibreOffice version 5.4.7.2 was used.
     repository and then update "config.mk" to use the name of the image file
     you just exported.
 
-#Reference - Display sizes for Libreboot laptops
+# Reference - Display sizes for Libreboot laptops
+
 |Laptop Model |Pixel Width|Pixel Height|Aspect Ratio|
 |-------------|-----------|------------|------------|
 |Lenovo x200  |1280       |800         |16:10       |
 
-#Copyright
+# Copyright
 
 Copyright (C) 2018 Jason T. Lenz
 
-#License
+# License
 
 Unless otherwise noted all files in this repository are under the MIT license
 as described in the "LICENSE" file in this repository.  The Libreboot logo in
