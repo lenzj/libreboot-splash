@@ -5,6 +5,7 @@ LB_BAS = $(LB_MIR)/stable/$(LB_VER)
 LB_SHA = SHA512SUMS
 LB_SIG = SHA512SUMS.sig
 LB_REC = 0x969A979505E8C5B2
+LB_KEYSERVER = hkp://ha.pool.sks-keyservers.net
 
 LBR_NAM = libreboot_r$(LB_VER)_$(LBR_LOD)_$(LBR_COM)_$(LBR_SIZ)mb
 LBR_TXZ = $(LBR_NAM).tar.xz
@@ -86,7 +87,7 @@ $(PKG)/$(LB_SHA): config.mk
 	mkdir -p $(PKG)
 	wget -O $(PKG)/$(LB_SHA) $(LB_BAS)/$(LB_SHA)
 	wget -O $(PKG)/$(LB_SIG) $(LB_BAS)/$(LB_SIG)
-	gpg --recv-keys $(LB_REC)
+	gpg --keyserver $(LB_KEYSERVER) --recv-keys $(LB_REC)
 	cd $(PKG); gpg --verify $(LB_SIG)
 	touch $@
 
